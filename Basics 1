@@ -8,5 +8,46 @@ You might want to alter the appearance of your RStudio window. The default appea
 
 Let’s get going on our analysis!
 One of the helpful features in RStudio is the ability to create a project. A project is a special directory that contains all of the code and data that you will need to run an analysis.
-At the top of your screen you’ll see the “File” menu. Select that menu and then the menu for “New Project…”.
+At the top of your screen you’ll see the “File” menu. Select that menu and then the menu for “New File".
+There are many types of files/projects you can open and use in R Studio. We will be using the "R Script". This will open a new R script in the "Editor Tab". We will be adding our code into the "Editor Tab" and then it will run in our "Consule Panel"
+
+We are going to first name our new R script and call it "PenguinPractice". Go to "File", "Save As" and then save your file somewhere you can access it again, for me that will be on my desktop.
+
+On line 1 of PenguinPractice.R, type 2+2.
+With your cursor on the line with the 2+2, click the button that says Run. You should be able to see that 2+2 was run in the Console.
+As you write more code, you can highlight multiple lines and then click Run to run all of the lines you have selected.
+
+Let's practice a little more with our syntax in R.
+we have things called objects and variables in R, this is reflected with the <- symbol. 'object <- value'. These are case sensitive & cannot start with a number.
+
+Examples:
+'x <- 5
+now call x
+
+let's now make x = 9
+
+now call x, what happened?'
+
+objects are stored, but overwritten if they are given a new value later in a code. This is important if you have variables with similar names.
+
+Another function you should know is concatenate with is represented with a lowercase 'c'. I am going to use this to explain lists.
+
+names <- c(Cindy, Kim, John)
+names
+
+Let’s delete the line with 2+2 and replace it with install.packages("tidyverse") and highlight and run this code.
+
+When you loaded the tidyverse package, you probably got a message like the one we got above. Don’t panic! These messages are just giving you more information about what happened when you loaded tidyverse. The tidyverse is actually a collection of several different packages, so the first section of the message tells us what packages were installed when we loaded tidyverse (these include ggplot2, which we’ll be using a lot in this lesson, and dyplr, which you’ll be introduced to tomorrow in the R for Data Analysis lesson).
+The second section of messages gives a list of “conflicts.” Sometimes, the same function name will be used in two different packages, and R has to decide which function to use. For example, our message says that:
+dplyr::filter() masks stats::filter()
+This means that two different packages (dyplr from tidyverse and stats from base R) have a function named filter(). By default, R uses the function that was most recently loaded, so if we try using the filter() function after loading tidyverse, we will be using the filter() function > from dplyr().
+
+
+You only need to install packages once on a computer, then we can call them using library(tidyverse) function. *Note the quotations in the package call and not in the library call
+
+
+You try: 
+install.packages("palmerpenguins")
+
+
 
