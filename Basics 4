@@ -39,6 +39,7 @@ We compare body_mass_g between male and female Gentoo penguins using a two sampl
 
 t.test(body_mass_g ~ sex, data = gentoo_df)
 
+Male Gentoo penguins weigh more than female Gentoo penguins, and the difference is statistically significant.
 
 NEXT STEPS!
 How to Help Themselves After
