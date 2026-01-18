@@ -32,7 +32,7 @@ objects are stored, but overwritten if they are given a new value later in a cod
 
 Another function you should know is concatenate with is represented with a lowercase 'c'. I am going to use this to explain lists.
 
-names <- c(Cindy, Kim, John)
+names <- c("Cindy", "Kim", "John")
 names
 
 Let’s delete the line with 2+2 and replace it with install.packages("tidyverse") and highlight and run this code.
