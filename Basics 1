@@ -46,8 +46,10 @@ This means that two different packages (dyplr from tidyverse and stats from base
 You only need to install packages once on a computer, then we can call them using library(tidyverse) function. *Note the quotations in the package call and not in the library call
 
 
-You try: 
+You try install and call the library: 
 install.packages("palmerpenguins")
+
+library(palmerpenguins)
 
 
 
