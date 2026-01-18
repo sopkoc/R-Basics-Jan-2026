@@ -1,0 +1,59 @@
+Importing data:
+
+df <- read.csv("data.csv")
+example: metsyndata <- read.csv("C:/Users/cjsop/Desktop/EAB_703/Metabolic Syndrome.csv")
+
+Visulization - IF TIME
+
+Scatter Plot
+
+we can use different graph visualizations to answers questions that are interesting to us.
+“Is bill length related to bill depth?”
+
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point()
+
+we can add different colors to represent different species in this graph:
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point()
+
+we can also add labels to our graph:
+ggplot(penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+  geom_point() +
+  labs(title = "Bill Length vs Depth in Penguins",
+       x = "Bill Length (mm)",
+       y = "Bill Depth (mm)")
+
+geom_point() → scatter
+geom_line() → line
+geom_col() → bars
+geom_histogram()
+geom_boxplot()
+
+SUPER FAST STATS DEMO!
+Do male Gentoo penguins weigh more than female Gentoo penguins?
+
+gentoo_df <- filter(penguins, species == "Gentoo")
+
+We compare body_mass_g between male and female Gentoo penguins using a two sample t-test becuase we are comparing two groups:
+
+t.test(body_mass_g ~ sex, data = gentoo_df)
+
+
+NEXT STEPS!
+How to Help Themselves After
+
+Useful resources:
+R for Data Science (tidyverse-focused)
+Tidyverse site / cheatsheets
+StackOverflow
+Posit Cloud for no-install learning
+ChatGPT - be weary
+
+
+
+
+
+
+
+
