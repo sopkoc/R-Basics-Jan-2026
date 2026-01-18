@@ -3,7 +3,7 @@ Great! Let's keep going.
 We are now going to learn how to select columns to only keep certain variables.
 Let's use our penguins data set and we want to only keep the species and body mass. Now my own rule of thumb is to create a new data frame with altering our data and keep the original intact, b/c I make a lot of mistakes.
 
-pens_df <- select(penguins, species, body_mass_g)
+pens_df <- select(penguins, species, body_mass_g, bill_length_mm, bill_depth_mm, year)
 pens_df
 
 next let's drop a column. We are going to get rid of the 'year' column. Maybe we don't need it for the analysis we are doing this time around.
