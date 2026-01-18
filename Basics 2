@@ -15,4 +15,38 @@ score_df <- data.frame (names, scores)
 score_df
 score_df$names
 
+Now we are going to look at some data!
+
+we are going to look at our data a few ways the first thing we want to look at is where is our data in our RStudio. Let's look in our Environment Panel and you can see it there.
+So one way to look at the data is to click on this small calendar or table button here. This will open your data up in a new tab next to our Editor Tab
+
+Another way is to use some code.
+Type penguins and run that
+
+now this dataset lives in R, so we did not need to name it - we will go over that quickly at the end, but this dataset is named penguins
+
+Great! Now let's use the glimpse() function
+
+glimpse (penguins)
+Each row is one penguin.
+Each column is a variable: species, island, bill length, body mass, etc.
+
+Let's only keep certain penguins we only want Adelie penguins in this new dataframe.
+
+adelie <- filter(penguins, species == "Adelie")
+adelie
+
+So another way to write this is with something called a pipeline, which is a percent, greater than, percent sign.
+
+adelie <- penguins %>%
+filter(species == "Adelie")
+
+You can also use other mathematical functions in there, so fo instance if I wanted all the penguins who bill length was greater than 45 mm
+
+big_bill <- filter(penguins, bill_length_mm > 45)
+big_bill
+
+Now you try. Filter for only the Adelie Penguins that live on Dream Island.
+adelie_dream <- filter( penguins, species == "Adelie", island == "Dream")
+
 
