@@ -48,5 +48,8 @@ big_bill
 
 Now you try. Filter for only the Adelie Penguins that live on Dream Island.
 adelie_dream <- filter( penguins, species == "Adelie", island == "Dream")
+adelie_dream
+
+
 
 
