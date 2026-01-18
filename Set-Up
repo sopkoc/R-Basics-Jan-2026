@@ -1,0 +1,19 @@
+You will need the following:
+
+-Access to Zoom
+
+-Download R (base) 
+R is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use RStudio.
+Go here https://cran.r-project.org/mirrors.html
+for LV -> Choose USA > University of Utah link and follow download instructions
+
+
+-Download R Studio
+go here https://posit.co/download/rstudio-desktop/
+** If on Mac scroll down on the page to get access to Mac download
+
+Once all downloads are complete, open R studio and check to make sure a white window with some panes pops up 
+
+
+You are now ready for R Basics
+
