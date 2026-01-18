@@ -1,0 +1,11 @@
+Before we jump into code, I want to give you a quick sense of what R is and why people use it. R is a programming language built for statistics, data analysis, and visualization. 
+You’ll see it a lot in research, academia, and data-focused industries like healthcare, economics, and social science.
+
+One of the big reasons R is popular is that it’s free and open-source, so it’s easy for individuals, labs, and teams to adopt. It also has a large ecosystem of packages, which are add-ons kinda of like apps on your phone that make data tasks easier and more efficient.
+
+You might hear the term ‘tidyverse’ as we go. That’s just a family of popular packages that make working with data in R feel consistent and beginner-friendly.
+
+We’ll also be using RStudio, which is an interface for writing R code. It puts your code, plots, files, and console all in one place so you’re not juggling windows. It doesn’t change the language itself, but it makes it much easier to work with.
+
+Today we’re not going into anything advanced. The goal is to get comfortable with the basics—what R syntax looks like, how to work with data, and how to make a simple visualization. 
+By the end, you should have a sense of how R can be used for everyday analysis without needing a programming background.
