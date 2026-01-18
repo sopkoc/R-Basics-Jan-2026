@@ -1,0 +1,18 @@
+Let's talk a bit about Data Structures R has a few core data structures. We don’t need to know all of them in depth today, just the ones that help us work with data.
+
+Vectors are really simple lists that are 1 demensional. The elements in the list need to all be the same (numeric, character, logical)
+this looks like names <- c("Kim", "Cindy", "John") or scores <- c(95, 88, 97). 
+
+You may also hear the word "factor" this is a categorical data like gender, species, or treatment group. These may look like characters, but behave a little differently
+These are mostly just used for plotting or modeling data.
+
+Data Frames/Tibbles are a table like structure just like you see in Excel or SPSS. The rows are our observations and the columns are our variables.
+Each column could be a different element
+Tibbles are specific to the tidyverse. You can think of them as flexible data frames that make it easier to print them out and work with them.
+
+score_df <- data.frame (names, scores)
+
+score_df
+score_df$names
+
+
