@@ -1,0 +1,83 @@
+Great! Let's keep going.
+
+We are now going to learn how to select columns to only keep certain variables.
+Let's use our penguins data set and we want to only keep the species and body mass. Now my own rule of thumb is to create a new data frame with altering our data and keep the original intact, b/c I make a lot of mistakes.
+
+pens_df <- select(penguins, species, body_mass_g)
+pens_df
+
+next let's drop a column. We are going to get rid of the 'year' column. Maybe we don't need it for the analysis we are doing this time around.
+
+select(pens_df, -year)
+
+Great!
+Next we are going to sort our rows by body mass in our new dataset from lightest to heaviest.
+
+arrange(pens_df, body_mass_g)
+
+This is where you say but.. Cindy what if I need it to go the other way witht he heaviest first. I say great question!
+
+arrange(pens_df, desc(body_mass_g))
+
+Now you try!
+I want to arrange our pens_df by species and then heaviest first body mass.
+
+arrange(pens_df, species, desc(body_mass_g))
+
+Let's keep going!
+
+We are going to create a new column. For this one we are going to convert the body mass of the penguins from grams to kilograms, but we want to keep the grams column
+
+mutate(pens_df, body_mass_kg = body_mass_g / 1000)
+
+Now you try!
+
+I want to create a new column of bill_ratio (length/depth)
+
+mutate(pens_df, bill_ratio = bill_length_mm / bill_depth_mm)
+
+
+what if we wanted to summarise our data?
+
+let's see if we can find out the average body mass across all the penguins in our dataset together.
+
+summarise(pens_df, mean_body_mass = mean(body_mass_g, na.rm = TRUE))
+
+** na.rm = TRUE tells R to ignore missing values (NA) when doing a calculation. Without it, functions like mean(), sd(), or sum() will often return NA because the missing values get in the way.
+
+we can also use the group_by() which works similar to the filter() function we learned earlier.
+
+so I am going to group the Mean body mass by species in this next function that will be nested. 
+
+summarise(group_by(pens_df, species), mean_body_mass = mean(body_mass_g, na.rm = TRUE), n=n())
+
+*** n = n() is just a way to count how many rows (or cases) are in each group when using summarise(). So if you grouped by species, it would tell you how many penguins of each species there are.
+
+Now you try!
+create a nested function that will summarise the Mean flipper length by species and sex
+summarise(group_by(penguins, species, sex), mean_flipper = mean(flipper_length_mm, na.rm = TRUE),n = n())
+
+Three more short functions left!!
+
+you can do quick counts with count() function.
+
+How many penguins are there per species in the larger dataset?
+count(penguins, species)
+
+You can even count them by their count
+let's look at species by island, sorted by count
+
+count(penguins, species, island, sort=TRUE)
+
+How to drop rows with missing values.
+
+pens_clean <- drop_na(penguins)
+pens_clean
+
+last but not least how to rename columns...
+penguins_renamed <- rename(penguins, bill_length = bill_length_mm, bill_depth  = bill_depth_mm, flipper_len = flipper_length_mm)
+
+
+
+
+
